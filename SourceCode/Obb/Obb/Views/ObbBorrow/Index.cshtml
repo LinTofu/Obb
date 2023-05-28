@@ -1,0 +1,66 @@
+﻿@model List<Obb.Models.ObbBook>
+
+@{
+    var sTitle = "玉山線上圖書借閱系統";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@sTitle</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/Scripts/obbborrow.js"></script>
+
+
+    <style>
+        body {
+            background-color: #C4E1E1;
+        }
+    </style>
+
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <input type="hidden" id="UserID" value="@ViewBag.UserID" />
+
+    <div class="container">
+        <button type="button" class="btn btn-success" onclick="bookBorrow()">借閱</button>
+        <table id="ObbBook_Table" class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ISBN</th>
+                    <th>書名</th>
+                    <th>作者</th>
+                    <th>內容簡介</th>
+                    <th>書籍狀態</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @if(item.Status != "已借閱"){
+                            <td><input type="checkbox" name="BookBorrow" value="@item.ISBN" /></td>
+                        }else{
+                            <td></td>
+                        }
+                        <td name="ISBN">@item.ISBN</td>
+                        <td name="BookName">@item.BookName</td>
+                        <td name="BookAuthor">@item.BookAuthor</td>
+                        <td name="BookIntroduction">@item.BookIntroduction</td>
+                        <td name="Status">@item.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

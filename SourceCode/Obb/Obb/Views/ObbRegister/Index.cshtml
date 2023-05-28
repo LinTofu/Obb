@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+    var sTitle = "玉山線上圖書借閱系統";
+}
+
+<style>
+    body {
+        background-color: #C4E1E1;
+    }
+
+    .signup_block {
+        background-color: #95CACA;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@sTitle</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+        body {
+            background-color: #C4E1E1;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center d-none d-sm-block" style="margin-top:3%;">
+        <h2 class="text-center">註冊</h2>
+
+        <div style="height:3%"></div>
+
+        <div class="container text-center signup_block" style="width:30%;height:80%">
+            <p style="height:3%"></p>
+            <form method="post" action="">
+                <div class="form-floating">
+                    <input type="text" id="UserNMC_ID" name="UserNM" class="form-control" />
+                    <label for="floatingUserNMC">姓名</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="text" id="PhoneNo_ID" name="PhoneNo" class="form-control" />
+                    <label for="floatingPhoneNo">手機號碼</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="password" id="Password_ID" name="Password" class="form-control" />
+                    <label for="floatingPassword">密碼</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="Password" id="RepeatPassword_ID" name="RepeatPassword" class="form-control" />
+                    <label for="floatingRepeatPassword">重複輸入密碼</label>
+                </div>
+
+                <p style="font-size:10px;color:darkcyan">密碼需至少8個字元，且包含大小寫英文和數字</p>
+
+                <input type="hidden" id="pw_date" name="pw_date" />
+                <input type="button" id="signupcheck" class="btn btn-primary" onclick="UserRegiser()" value="註冊" />
+            </form>
+        </div>
+    </div>
+
+    <div class="text-center d-block d-sm-none" style="margin-top:3%;">
+        <h2 class="text-center">註冊</h2>
+
+        <div style="height:3%"></div>
+
+        <div class="container text-center signup_block" style="width:80%;height:80%">
+            <p style="height:3%"></p>
+            <form method="post" action="">
+                <div class="form-floating">
+                    <input type="text" id="UserNMC_ID" name="UserNM" class="form-control" />
+                    <label for="floatingUserNMC">姓名</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="text" id="PhoneNo_ID" name="PhoneNo" class="form-control" />
+                    <label for="floatingPhoneNo">手機號碼</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="password" id="Password_ID" name="Password" class="form-control" />
+                    <label for="floatingPassword">密碼</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="Password" id="RepeatPassword_ID" name="RepeatPassword" class="form-control" />
+                    <label for="floatingRepeatPassword">重複輸入密碼</label>
+                </div>
+
+                <p style="font-size:10px;color:darkcyan">密碼需至少8個字元，且包含大小寫英文和數字</p>
+
+                <input type="hidden" id="pw_date" name="pw_date" />
+                <input type="button" id="signupcheck" class="btn btn-primary" onclick="UserRegiser()" value="註冊" />
+            </form>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Scripts/obbregister.js" asp-append-version="true"></script>
+</body>
+</html>

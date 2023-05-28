@@ -1,0 +1,64 @@
+-- DROP SCHEMA dbo;
+
+CREATE SCHEMA dbo;
+-- Obb.dbo.OBBBOOK definition
+
+-- Drop table
+
+-- DROP TABLE Obb.dbo.OBBBOOK;
+
+CREATE TABLE Obb.dbo.OBBBOOK (
+	ISBN varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	BookName varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	BookAuthor varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	BookIntroduction varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	CONSTRAINT OBBBOOK_PK PRIMARY KEY (ISBN)
+);
+
+
+-- Obb.dbo.OBBBORROWRECORD definition
+
+-- Drop table
+
+-- DROP TABLE Obb.dbo.OBBBORROWRECORD;
+
+CREATE TABLE Obb.dbo.OBBBORROWRECORD (
+	UserID varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	InventoryID varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	BorrowDateTime varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	ReturnDateTime varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL
+);
+
+
+-- Obb.dbo.OBBINVENTORY definition
+
+-- Drop table
+
+-- DROP TABLE Obb.dbo.OBBINVENTORY;
+
+CREATE TABLE Obb.dbo.OBBINVENTORY (
+	InventoryID varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	ISBN varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	StoreTime varchar(14) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	Status varchar(10) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	CONSTRAINT OBBINVENTORY_PK PRIMARY KEY (InventoryID)
+);
+
+
+-- Obb.dbo.OBBUSER definition
+
+-- Drop table
+
+-- DROP TABLE Obb.dbo.OBBUSER;
+
+CREATE TABLE Obb.dbo.OBBUSER (
+	UserID varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	UserNMC varchar(60) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	PhoneNo varchar(20) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	Password varchar(256) COLLATE Chinese_Taiwan_Stroke_CI_AS NOT NULL,
+	RegistrationDateTime varchar(14) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	LoginDateTime varchar(14) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	LastLoginDateTime varchar(14) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	PassSalt varchar(100) COLLATE Chinese_Taiwan_Stroke_CI_AS NULL,
+	CONSTRAINT OBBUSER_PK PRIMARY KEY (UserID)
+);

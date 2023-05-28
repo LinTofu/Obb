@@ -1,0 +1,91 @@
+﻿
+sweetalert2
+
+  下載 sweetalert2 使用 npm。
+
+  npm
+
+    cd C:\Temp
+
+    mkdir sweetalert2
+
+    cd sweetalert2
+
+    npm i sweetalert2 -or- npm i sweetalert2@10.16.7
+
+
+    cd C:\Temp\sweetalert2\node_modules\sweetalert2\dist
+
+    dir
+
+    磁碟區 C 中的磁碟是 OS
+    磁碟區序號:  EEEF-EEE7
+    
+     C:\Temp\sweetalert2\node_modules\sweetalert2\dist 的目錄
+    
+    2022/01/10  下午 01:37    <DIR>          .
+    2022/01/10  下午 01:37    <DIR>          ..
+    2022/01/10  下午 01:37           130,963 sweetalert2.all.js
+    2022/01/10  下午 01:37            67,490 sweetalert2.all.min.js
+    2022/01/10  下午 01:37            29,921 sweetalert2.css
+    2022/01/10  下午 01:37           106,432 sweetalert2.js
+    2022/01/10  下午 01:37            24,273 sweetalert2.min.css
+    2022/01/10  下午 01:37            42,959 sweetalert2.min.js
+                   6 個檔案         402,038 位元組
+               2 個目錄  67,383,902,208 位元組可用
+--
+
+  jsDelivr sweetalert2
+  https://www.jsdelivr.com/package/npm/sweetalert2
+
+    線上瀏覽 sweetalert2 程式檔案。
+
+  取得 npm 指令 - jsDelivr
+
+    npm
+    https://www.npmjs.com/package/sweetalert2
+
+      Install
+
+        npm i sweetalert2
+
+      Repository
+      github.com/sweetalert2/sweetalert2
+      
+      Homepage
+      sweetalert2.github.io/
+
+    *若需取得固定版本 sweetalert2, 進入上述 npm sweetalert2 網址後,
+     點擊 [versions] 頁面, 檢視 Version History 點擊指定版本編號,
+     進入指定版本頁面取得 npm 指令.
+
+注意
+
+．sweetalert2 10.16.7 為 Internet Explorer 瀏覽器最後支援版本且必須引用 Promise polyfill（因為 IE 無支援 Promise 物件）。
+
+  .NET Framework
+
+    <script src="@Url.Content("~/Scripts/promise/polyfill.min.js", true)"></script>
+
+  .NET Core
+
+    <script src="@Url.Content("~/lib/promise/js/polyfill.min.js", true)"></script>
+
+  Migration from SweetAlert to SweetAlert2
+  https://github.com/sweetalert2/sweetalert2/wiki/Migration-from-SweetAlert-to-SweetAlert2#1-ie-support
+
+  npm - promise-polyfill
+  https://www.npmjs.com/package/promise-polyfill
+
+．sweetalert2 11.0.7 版本開始使用 Arrow Function, 而 Internet Explorer 瀏覽器任何版本皆無支援 Arrow Function,
+  Internet Explorer 瀏覽器若不正確使用版本在執行時期將發生語法錯誤。
+
+  Arrow function
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+-- end --
+
+
+
+
+

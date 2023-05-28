@@ -1,0 +1,127 @@
+﻿@model Obb.Models.ObbUser
+
+@{
+    Layout = null;
+    var sTitle = "玉山線上圖書借閱系統";
+}
+
+@{
+    Layout = null;
+}
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@sTitle</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/Scripts/obblogin.js"></script>
+
+
+    <style>
+        body {
+            background-color: #C4E1E1;
+        }
+
+        .login_block {
+            background-color: #95CACA;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .eye {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        a{
+            color: white;
+            text-decoration-line: none;
+        }
+
+        
+    </style>
+
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <div class="text-center d-none d-sm-block" style="margin-top:3%;">
+        <h2 class="text-center">玉山線上圖書借閱系統</h2>
+
+        <div style="height:3%"></div>
+
+        <div class="container text-center login_block" style="width:30%;height:auto">
+            <div style="height:5%"></div>
+            <form id="login_form" method="POST" action="/ObbLogin/Index">
+                <div class="form-floating">
+                    <input type="text" id="PhoneNo_Id" name="phoneNo" class="form-control" required />
+                    <label for="floating.PhoneNo">手機號碼</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="password" id="Pass_Id" name="password" class="form-control" required />
+                    <label for="floatingPassword">密碼</label>
+                </div>
+
+                <br />
+
+                <div style="height:5%"></div>
+
+                <input type="submit" class="btn btn-primary show" style="" value="登入" />
+
+                <button type="button" class="btn btn-primary">
+                    <a asp-area="" asp-controller="ObbRegister" asp-action="Index">註冊</a>
+                </button>
+
+                <div style="height:5%"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="text-center d-block d-sm-none" style="margin-top:30%;">
+        <h2 class="text-center">玉山線上圖書借閱系統</h2>
+
+        <div style="height:10%"></div>
+
+        <div class="container text-center login_block" style="width:80%;height:60%">
+            <div style="height:5%"></div>
+            <form method="post" action="/ObbLogin/Index">
+                <div class="form-floating">
+                    <input type="text" id="phoneNo_Id" name="PhoneNo" class="form-control" required />
+                    <label for="floating.PhoneNo">手機號碼</label>
+                </div>
+
+                <br />
+
+                <div class="form-floating">
+                    <input type="password" id="pass_id" name="pass" class="form-control" required />
+                    <label for="floatingPassword">密碼</label>
+                </div>
+
+                <br />
+
+                <div style="height:5%"></div>
+
+                <input type="submit" class="btn btn-primary show" style="" value="登入" />
+
+                <button type="button" class="btn btn-primary">
+                    <a asp-area="" asp-controller="ObbRegister" asp-action="Index">註冊</a>
+                </button>
+
+                <div style="height:5%"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

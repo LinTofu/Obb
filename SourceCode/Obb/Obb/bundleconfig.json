@@ -1,0 +1,9 @@
+[
+  {
+    "outputFileName": "wwwroot/js/login.js",
+    "inputFiles": [
+      "Scripts/login.js"
+    ],
+    "minify": { "enabled": true }
+  }
+]

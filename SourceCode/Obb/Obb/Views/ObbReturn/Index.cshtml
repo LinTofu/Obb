@@ -1,0 +1,60 @@
+﻿@model List<Obb.Models.ObbBook>
+
+@{
+    var sTitle = "玉山線上圖書借閱系統";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@sTitle</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/Scripts/obbreturn.js"></script>
+
+
+    <style>
+        body {
+            background-color: #C4E1E1;
+        }
+    </style>
+
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <input type="hidden" id="UserID" value="@ViewBag.UserID" />
+
+    <div class="container">
+        <button type="button" class="btn btn-success" onclick="bookReturn()">還書</button>
+        <table id="ObbBook_Table" class="table table-success table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ISBN</th>
+                    <th>書名</th>
+                    <th>作者</th>
+                    <th>內容簡介</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><input type="checkbox" name="BookReturn" value="@item.ISBN" /></td>
+                        <td name="ISBN">@item.ISBN</td>
+                        <td name="BookName">@item.BookName</td>
+                        <td name="BookAuthor">@item.BookAuthor</td>
+                        <td name="BookIntroduction">@item.BookIntroduction</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
